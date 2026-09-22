@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - Ideo Style | Ladies Traditional Clothing</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ========================================================
+           IDEO STYLE - CATEGORIES PAGE STYLES
+           Traditional Desi Aesthetic (Maroon, Gold & Warm Cream)
+           ======================================================== */
+        :root {
+            --primary-maroon: #5b101d;
+            --dark-maroon: #3b070f;
+            --emerald: #0f3e36;
+            --gold: #c59b4c;
+            --gold-light: #f5eedc;
+            --gold-hover: #ddb05b;
+            --bg-cream: #faf7f2;
+            --bg-cream-alt: #f3ede2;
+            --text-dark: #222222;
+            --text-muted: #666666;
+            --white: #ffffff;
+            --border-color: #e8ded1;
+            
+            --font-heading: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Montserrat', sans-serif;
+            --shadow-card: 0 6px 18px rgba(0,0,0,0.06);
+            --shadow-hover: 0 12px 28px rgba(91, 16, 29, 0.14);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+
+        /* ---------------- Header ---------------- */
+        .page-header {
+            background-color: var(--white);
+            border-bottom: 2px solid var(--border-color);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+        }
+
+        .header-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-sub {
+            font-size: 0.65rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .brand-title {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            color: var(--primary-maroon);
+            font-weight: 700;
+            letter-spacing: 2px;
+            line-height: 1;
+        }
+
+        .brand-tag {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+        }
+
+        .categories-quick-nav {
+            display: flex;
+            gap: 16px;
+            list-style: none;
+        }
+
+        .categories-quick-nav li a {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            padding: 6px 12px;
+            border-radius: 20px;
+            transition: all 0.25s ease;
+        }
+
+        .categories-quick-nav li a:hover {
+            background-color: var(--primary-maroon);
+            color: var(--white);
+        }
+
+        /* ---------------- Banner ---------------- */
+        .categories-hero {
+            background: linear-gradient(rgba(59, 7, 15, 0.9), rgba(15, 62, 54, 0.85)), url('https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=1600&q=80') center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 60px 0;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(197, 155, 76, 0.2);
+            border: 1px solid var(--gold);
+            color: var(--gold-light);
+            font-size: 0.78rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 5px 16px;
+            border-radius: 20px;
+            margin-bottom: 14px;
+        }
+
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: 1.5px;
+        }
+
+        .hero-text {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1rem;
+            color: #f1ede6;
+            font-weight: 300;
+        }
+
+        /* ---------------- 5 Category Sections ---------------- */
+        .category-section {
+            padding: 65px 0;
+        }
+
+        .category-section.alt-bg {
+            background-color: var(--bg-cream-alt);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-tag {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .section-name {
+            font-family: var(--font-heading);
+            font-size: 2.3rem;
+            font-weight: 700;
+            color: var(--primary-maroon);
+        }
+
+        .ornament {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin: 10px 0 14px;
+        }
+
+        .ornament .line {
+            width: 50px;
+            height: 1px;
+            background-color: var(--gold);
+        }
+
+        .ornament .symbol {
+            color: var(--gold);
+            font-size: 0.9rem;
+        }
+
+        .section-description {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        /* Category Cards Grid */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .category-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .category-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--gold);
+        }
+
+        .card-img-box {
+            position: relative;
+            height: 290px;
+            background-color: #eee;
+            overflow: hidden;
+        }
+
+        .card-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            transition: transform 0.5s ease;
+        }
+
+        .category-card:hover .card-img-box img {
+            transform: scale(1.06);
+        }
+
+        .badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background-color: var(--primary-maroon);
+            color: var(--gold-light);
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        .badge.green {
+            background-color: var(--emerald);
+        }
+
+        .card-content {
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .cat-sub {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .cat-title {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            line-height: 1.25;
+        }
+
+        .cat-desc {
+            font-size: 0.84rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 16px;
+            flex-grow: 1;
+        }
+
+        .card-bottom {
+            border-top: 1px solid var(--border-color);
+            padding-top: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-price {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .card-price strong {
+            display: block;
+            font-size: 0.92rem;
+            color: var(--primary-maroon);
+        }
+
+        .btn-view {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--primary-maroon);
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.2s;
+        }
+
+        .btn-view:hover {
+            color: var(--gold);
+            gap: 8px;
+        }
+
+        /* ---------------- Footer (4 SECTIONS) ---------------- */
+        .page-footer {
+            background-color: var(--dark-maroon);
+            color: #d6cfc7;
+            border-top: 3px solid var(--gold);
+            padding-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
+            gap: 36px;
+            padding-bottom: 50px;
+        }
+
+        /* Footer Section 1: About */
+        .footer-heading {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            color: var(--gold-light);
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 35px;
+            height: 2px;
+            background-color: var(--gold);
+        }
+
+        .footer-about-text {
+            font-size: 0.86rem;
+            line-height: 1.65;
+            color: #cbbeba;
+            margin-bottom: 18px;
+        }
+
+        .footer-contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 0.84rem;
+        }
+
+        .footer-contact-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .footer-contact-list i {
+            color: var(--gold);
+            margin-top: 4px;
+        }
+
+        /* Footer Section 2 & 3: Lists */
+        .footer-links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links-list li a {
+            font-size: 0.85rem;
+            color: #cbbeba;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .footer-links-list li a i {
+            font-size: 0.65rem;
+            color: var(--gold);
+        }
+
+        .footer-links-list li a:hover {
+            color: var(--gold-light);
+            transform: translateX(4px);
+        }
+
+        /* Footer Section 4: Contact & Social */
+        .social-box {
+            margin-top: 15px;
+        }
+
+        .social-title {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .social-icons-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-circle {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(197, 155, 76, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-light);
+            font-size: 1rem;
+            transition: all 0.25s ease;
+        }
+
+        .social-circle:hover {
+            background-color: var(--gold);
+            color: var(--dark-maroon);
+            transform: translateY(-3px);
+        }
+
+        .whatsapp-box {
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(197, 155, 76, 0.3);
+            padding: 12px;
+            border-radius: 6px;
+        }
+
+        .whatsapp-box a {
+            color: #25d366;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .whatsapp-box a:hover {
+            color: #4ff188;
+        }
+
+        /* Footer Copyright Bottom */
+        .footer-bottom {
+            background-color: rgba(0, 0, 0, 0.35);
+            border-top: 1px solid rgba(197, 155, 76, 0.2);
+            padding: 18px 0;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #a49791;
+        }
+
+        /* ---------------- Responsive ---------------- */
+        @media (max-width: 1024px) {
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-wrap {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .categories-quick-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+            }
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            .section-name {
+                font-size: 1.9rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+            .card-img-box {
+                height: 260px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Simple Dedicated Header -->
+    <header class="page-header">
+        <div class="container header-wrap">
+            <div class="brand-box">
+                <span class="brand-sub">THE DESI HERITAGE</span>
+                <h1 class="brand-title">IDEO STYLE</h1>
+                <span class="brand-tag">Ladies Traditional & Desi Clothing</span>
+            </div>
+            <!-- Quick navigation to the 5 category sections -->
+            <ul class="categories-quick-nav">
+                <li><a href="#stitched">Stitched</a></li>
+                <li><a href="#unstitched">Unstitched</a></li>
+                <li><a href="#fancy">Fancy Dresses</a></li>
+                <li><a href="#luxury">Luxury Pret</a></li>
+                <li><a href="#shawls">Dupattas & Shawls</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Categories Banner -->
+    <section class="categories-hero">
+        <div class="container">
+            <span class="hero-badge">Catalog 2026</span>
+            <h2 class="hero-title">Clothing Categories</h2>
+            <p class="hero-text">Hamari tamam traditional desi ladies clothing categories ek hi jagah explore karein — Stitched pret, Unstitched fabrics, Fancy party dresses, Luxury formal wear aur Royal shawls.</p>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 1: STITCHED / READY-TO-WEAR
+         ========================================== -->
+    <section class="category-section" id="stitched">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Category 01</span>
+                <h2 class="section-name">Stitched / Ready-to-Wear</h2>
+                <div class="ornament">
+                    <span class="line"></span>
+                    <span class="symbol">❖</span>
+                    <span class="line"></span>
+                </div>
+                <p class="section-description">Pehnne ke liye mukammal tayyar stylish kurtis, 2-piece sets aur 3-piece traditional shalwar kameez suits.</p>
+            </div>
+
+            <div class="category-grid">
+                <!-- Card 1 -->
+                <div class="category-card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80" alt="Embroidered Kurtis" loading="lazy">
+                        <span class="badge">Bestseller</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="cat-sub">1-Piece Pret</span>
+                        <h3 class="cat-title">Embroidered Kurtis</h3>
+                        <p class="cat-desc">Daily wear chic chikankari aur thread-work embroidered contemporary tunic kurtis.</p>
+                        <div class="card-bottom">
+                            <span class="card-price">Starting: <strong>Rs. 2,450</strong></span>
+                            <a href="#stitched" class="btn-view">View Category <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="category-card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=600&q=80" alt="2-Piece Co-Ord Sets" loading="lazy">
+                        <span class="badge green">New In</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="cat-sub">2-Piece Matching</span>
+                        <h3 class="cat-title">Shirt & Trouser Sets</h3>
+                        <p class="cat-desc">Printed aur solid matching 2-piece co-ord sets cigarette pants ke sath.</p>
+                        <div class="card-bottom">
+                            <span class="card-price">Starting: <strong>Rs. 3,950</strong></span>
+                            <a href="#stitched" class="btn-view">View Category <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="category-card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=600&q=80" alt="3-Piece Shalwar Kameez" loading="lazy">
+                        <span class="badge">Popular</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="cat-sub">3-Piece Complete</span>
+                        <h3 class="cat-title">Classic Shalwar Kameez</h3>
+                        <p class="cat-desc">Traditional Pakistani shalwar suits lawn jacquard aur chiffon dupatta ke sath.</p>
+                        <div class="card-bottom">
+                            <span class="card-price">Starting: <strong>Rs. 5,850</strong></span>
+                            <a href="#stitched" class="btn-view">View Category <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="category-card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=600&q=80" alt="Flared Frocks" loading="lazy">
+                        <span class="badge">Trending</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="cat-sub">Flared Pret</span>
+                        <h3 class="cat-title">Kalidar Frocks & Pishwas</h3>
+                        <p class="cat-desc">Khubsurat flared ghera, mirror buttons aur gota trims wale traditional frocks.</p>
+                        <div class="card-bottom">
+                            <span class="card-price">Starting: <strong>Rs. 4,800</strong></span>
+                            <a href="#stitched" class="btn-view">View Category <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 2: UNSTITCHED FABRICS
+         ========================================== -->
+    <section class="category-section alt-bg" id="unstitched">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Category 02</span>
+                <h2 class="section-name">Unstitched Collection</h2>
+                <div class="ornament">
+                    <span class="line"></span>
+                    <span class="symbol">❖</span>
+                    <span class="line"></span>
+                </div>
+                <p class="section-description">Apni pasand ke mutabiq silwane k liye behtareen unstitched fabrics — Lawn, Chiffon, Cotton aur Jacquard.</p>
+            </div>
+
+            <div class="category-grid">
+                <!-- Card 1 -->
+                <div class="category-card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=600&q=80" alt="Unstitched Lawn" loading="lazy">
+                        <span class="badge">Summer Fav</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="cat-sub">Pure Lawn 3-Piece</span>
+                        <h3 class="cat-title">Embroidered Lawn Suits</h3>
+                        <p class="cat-desc">Heavy embroidered front, digital silk ya chiffon dupatta aur dyed trousers.</p>
+                        <div class="card-bottom">
+                            <span class="card-price">Starting: <strong>Rs. 3,600</strong></span>
+                            <a href="#unstitched" class="btn-view">View Category <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="category-card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=600&q=80" alt="Chiffon Fabrics" loading="lazy">
+                        <span class="badge green">Pure Chiffon</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="cat-sub">Festive Fabrics</span>
+                        <h3 class="cat-title">Embroidered Chiffon Suits</h3>
+                        <p class="cat-desc">Crinkle chiffon par resham embroidery, pearls aur tilla work k suits.</p>
+                        <div class="card-bottom">
+                            <span class="card-price">Starting: <strong>Rs. 6,800</strong></span>
+                            <a href="#unstitched" class="btn-view">View Category <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="category-card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=600&q=80" alt="Jacquard & Silk" loading="lazy">
+                        <span class="badge">Woven</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="cat-sub">Jacquard & Weaves</span>
+                        <h3 class="cat-title">Gold Jacquard & Silk</h3>
+                        <p class="cat-desc">Gold metallic zari weavings, self-textured cotton silk fabric.</p>
+                        <div class="card-bottom">
+                            <span class="card-price">Starting: <strong>Rs. 4,950</strong></span>
+                            <a href="#unstitched" class="btn-view">View Category <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="category-card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80" alt="Velvet Fabrics" loading="lazy">
+                        <span class="badge">Royal Fabric</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="cat-sub">Pure Velvet</span>
+                        <h3 class="cat-title">Micro Velvet Fabrics</h3>
+                        <p class="cat-desc">Pure micro 9000 velvet unstitched collection embroidered neckline k sath.</p>
+                        <div class="card-bottom">
+                            <span class="card-price">Starting: <strong>Rs. 8,900</strong></span>
+                            <a href="#unstitched" class="btn-view">View Category <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 3: FANCY DRESSES & FESTIVE WEAR
+         ========================================== -->
+    <section class="category-section" id="fancy">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Category 03</span>
+                <h2 class="section-name">Fancy Dresses & Festive Wear</h2>
+                <div class="ornament">
+                    <span class="line"></span>
+                    <span class="symbol">❖</span>
+                    <span class="line"></span>
+                </div>
+                <p class="section-description">Mehndi, Mayun, Barat aur party functions k liye traditional fancy dresses — Sharara, Gharara aur Angrakha.</p>
+            </div>
+
+            <div class="category-grid">
+                <!-- Card 1 -->
+                <div class="category-card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Sharara & Gharara" loading="lazy">
+                        <span class="badge">Mehndi Special</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="cat-sub">Traditional Festive</span>
+                        <h3 class="cat-title">Sharara & Gharara Sets</h3>
+                        <p class="cat-desc">Gotta patti, kiran lace, mirror work aur flared traditional bottoms.</p>
+                        <div class="card-bottom">
+                            <span class="card-price">Starting: <strong>Rs. 10,500</strong></span>
+                            <a href="#fancy" class="btn-view">View Category <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="category-card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80" alt="Angrakha Styles" loading="lazy">
+                        <span class="badge green">Mughal Cut</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="cat-sub">Mughal Silhouette</span>
+                        <h3 class="cat-title">Royal Angrakha Dresses</h3>
+                        <p class="cat-desc">Cross-over neckline, traditional doriyan aur handmade latkans k sath.</p>
+                        <div class="card-bottom">
+                            <span class="card-price">Starting: <strong>Rs. 11,900</strong></span>
+                            <a href="#fancy" class="btn-view">View Category <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="category-card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&w=600&q=80" alt="Anarkali Gowns" loading="lazy">
+                        <span class="badge">Flared Ghera</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="cat-sub">Floor-Length Maxis</span>
+                        <h3 class="cat-title">Embroidered Anarkali Gowns</h3>
+                        <p class="cat-desc">Voluminous 32-kali flare, heavy embroidered bodice aur fancy dupattas.</p>
+                        <div class="card-bottom">
+                            <span class="card-price">Starting: <strong>Rs. 13,500</strong></span>
+                            <a href="#fancy" class="btn-view">View Category <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="category-card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=600&q=80" alt="Pre-Stitched Sarees" loading="lazy">
+                        <span class="badge">Party Saree</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="cat-sub">Traditional Drapes</span>
+                        <h3 class="cat-title">Pre-Stitched Party Sarees</h3>
+                        <p class="cat-desc">Georgette aur organza party sarees heavy embellished designer blouse k sath.</p>
+                        <div class="card-bottom">
+                            <span class="card-price">Starting: <strong>Rs. 12,000</strong></span>
+                            <a href="#fancy" class="btn-view">View Category <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 4: LUXURY PRET & FORMAL WEAR
+         ========================================== -->
+    <section class="category-section alt-bg" id="luxury">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Category 04</span>
+                <h2 class="section-name">Luxury Pret & Formals</h2>
+                <div class="ornament">
+                    <span class="line"></span>
+                    <span class="symbol">❖</span>
+                    <span class="line"></span>
+                </div>
+                <p class="section-description">High-end hand-embellished dresses — Dabka, Nakshi, Pure Velvet aur Korean Raw Silk formal wear.</p>
+            </div>
+
+            <div class="category-grid">
+                <!-- Card 1 -->
+                <div class="category-card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=600&q=80" alt="Organza Tunics" loading="lazy">
+                        <span class="badge">Dabka Work</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="cat-sub">Organza Couture</span>
+                        <h3 class="cat-title">Hand-Worked Organza Tunics</h3>
+                        <p class="cat-desc">Dabka, nakshi, cut-dana aur moti work se bani sophisticated formal shirts.</p>
+                        <div class="card-bottom">
+                            <span class="card-price">Starting: <strong>Rs. 18,500</strong></span>
+                            <a href="#luxury" class="btn-view">View Category <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="category-card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=600&q=80" alt="Raw Silk Formals" loading="lazy">
+                        <span class="badge green">Pure Silk</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="cat-sub">Pure Raw Silk</span>
+                        <h3 class="cat-title">Silk & Tissue Formals</h3>
+                        <p class="cat-desc">Korean raw silk straight shirts with pants aur metallic crushed tissue dupatta.</p>
+                        <div class="card-bottom">
+                            <span class="card-price">Starting: <strong>Rs. 21,000</strong></span>
+                            <a href="#luxury" class="btn-view">View Category <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="category-card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=600&q=80" alt="Velvet Formals" loading="lazy">
+                        <span class="badge">Velvet Pret</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="cat-sub">Royal Velvet</span>
+                        <h3 class="cat-title">Imperial Velvet Formals</h3>
+                        <p class="cat-desc">Emerald green aur deep maroon velvet dresses antique zardozi kaam k sath.</p>
+                        <div class="card-bottom">
+                            <span class="card-price">Starting: <strong>Rs. 25,000</strong></span>
+                            <a href="#luxury" class="btn-view">View Category <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="category-card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=600&q=80" alt="Embellished Capes" loading="lazy">
+                        <span class="badge">Modern Desi</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="cat-sub">Contemporary Cut</span>
+                        <h3 class="cat-title">Capes & Front-Open Jackets</h3>
+                        <p class="cat-desc">Embroidered jackets slip aur wide-leg palazzo pants ke modern combo k sath.</p>
+                        <div class="card-bottom">
+                            <span class="card-price">Starting: <strong>Rs. 17,500</strong></span>
+                            <a href="#luxury" class="btn-view">View Category <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 5: DUPATTAS, SHAWLS & ACCESSORIES
+         ========================================== -->
+    <section class="category-section" id="shawls">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Category 05</span>
+                <h2 class="section-name">Royal Dupattas & Traditional Shawls</h2>
+                <div class="ornament">
+                    <span class="line"></span>
+                    <span class="symbol">❖</span>
+                    <span class="line"></span>
+                </div>
+                <p class="section-description">Desi pehnawy ko mukammal karne wale shahi Banarsi dupattas, Kashmiri velvet shawls aur wedding accessories.</p>
+            </div>
+
+            <div class="category-grid">
+                <!-- Card 1 -->
+                <div class="category-card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=600&q=80" alt="Kashmiri Velvet Shawls" loading="lazy">
+                        <span class="badge">Heritage</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="cat-sub">Velvet Shawls</span>
+                        <h3 class="cat-title">Embroidered Velvet Shawls</h3>
+                        <p class="cat-desc">Charon taraf heavy zardozi border aur Kashmiri resham floral jaal shawls.</p>
+                        <div class="card-bottom">
+                            <span class="card-price">Starting: <strong>Rs. 18,000</strong></span>
+                            <a href="#shawls" class="btn-view">View Category <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="category-card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80" alt="Banarsi Dupattas" loading="lazy">
+                        <span class="badge green">Handloom</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="cat-sub">Handloom Weaves</span>
+                        <h3 class="cat-title">Banarsi Jacquard Dupattas</h3>
+                        <p class="cat-desc">Pure golden zari woven Banarsi dupattas kiran aur border finishing k sath.</p>
+                        <div class="card-bottom">
+                            <span class="card-price">Starting: <strong>Rs. 5,500</strong></span>
+                            <a href="#shawls" class="btn-view">View Category <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="category-card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=600&q=80" alt="Bridal Lehengas" loading="lazy">
+                        <span class="badge">Dulhan Couture</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="cat-sub">Bridal Wear</span>
+                        <h3 class="cat-title">Barat & Walima Lehengas</h3>
+                        <p class="cat-desc">Dulhan k liye heavy zardozi Barat lehengas aur soft pastel Walima maxis.</p>
+                        <div class="card-bottom">
+                            <span class="card-price">Starting: <strong>Rs. 110,000</strong></span>
+                            <a href="#shawls" class="btn-view">View Category <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="category-card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=600&q=80" alt="Organza & Chunri Dupattas" loading="lazy">
+                        <span class="badge">Traditional</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="cat-sub">Fancy Dupattas</span>
+                        <h3 class="cat-title">Organza Ruffle & Chunri</h3>
+                        <p class="cat-desc">Vibrant rangon ki Chunri dupattay aur gotta work scalloped organza wraps.</p>
+                        <div class="card-bottom">
+                            <span class="card-price">Starting: <strong>Rs. 3,800</strong></span>
+                            <a href="#shawls" class="btn-view">View Category <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER WITH EXACTLY 4 SECTIONS
+         ========================================== -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <!-- FOOTER SECTION 1: ABOUT IDEO STYLE -->
+                <div class="footer-col">
+                    <h3 class="footer-heading">About Ideo Style</h3>
+                    <p class="footer-about-text">
+                        Ideo Style ladies traditional desi clothing brand hai jo South Asian ethnic fashion, pure fabrics aur traditional hand-craft ko modern styles k sath pesh karta hai.
+                    </p>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Boutique #4, Fashion Avenue, Gulberg III, Lahore</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Helpline: +92 300 1234567</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Email: info@ideostyle.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- FOOTER SECTION 2: CATEGORIES LIST -->
+                <div class="footer-col">
+                    <h3 class="footer-heading">All Categories</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="#stitched"><i class="fa-solid fa-chevron-right"></i> Stitched / Ready-to-Wear</a></li>
+                        <li><a href="#stitched"><i class="fa-solid fa-chevron-right"></i> 2-Piece & 3-Piece Pret</a></li>
+                        <li><a href="#unstitched"><i class="fa-solid fa-chevron-right"></i> Unstitched Lawn Collection</a></li>
+                        <li><a href="#unstitched"><i class="fa-solid fa-chevron-right"></i> Embroidered Chiffon Fabrics</a></li>
+                        <li><a href="#fancy"><i class="fa-solid fa-chevron-right"></i> Fancy Sharara & Gharara</a></li>
+                        <li><a href="#fancy"><i class="fa-solid fa-chevron-right"></i> Traditional Angrakha Styles</a></li>
+                        <li><a href="#luxury"><i class="fa-solid fa-chevron-right"></i> Luxury Pret & Velvet Formals</a></li>
+                        <li><a href="#shawls"><i class="fa-solid fa-chevron-right"></i> Banarsi Dupattas & Shawls</a></li>
+                    </ul>
+                </div>
+
+                <!-- FOOTER SECTION 3: CUSTOMER CARE & POLICIES -->
+                <div class="footer-col">
+                    <h3 class="footer-heading">Customer Care</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="#care"><i class="fa-solid fa-chevron-right"></i> Size Measurement Guide</a></li>
+                        <li><a href="#care"><i class="fa-solid fa-chevron-right"></i> Custom Stitching Orders</a></li>
+                        <li><a href="#care"><i class="fa-solid fa-chevron-right"></i> Shipping & Delivery (Pakistan & Global)</a></li>
+                        <li><a href="#care"><i class="fa-solid fa-chevron-right"></i> Return & Exchange Policy</a></li>
+                        <li><a href="#care"><i class="fa-solid fa-chevron-right"></i> Fabric Care Instructions</a></li>
+                        <li><a href="#care"><i class="fa-solid fa-chevron-right"></i> Frequently Asked Questions (FAQs)</a></li>
+                    </ul>
+                </div>
+
+                <!-- FOOTER SECTION 4: CONTACT & SOCIAL CONNECT -->
+                <div class="footer-col">
+                    <h3 class="footer-heading">Contact & Connect</h3>
+                    <p class="footer-about-text">
+                        Hamare social channels par naye designs aur collections dekhein ya direct WhatsApp par rabta karein.
+                    </p>
+                    
+                    <div class="whatsapp-box">
+                        <a href="https://wa.me/923001234567" target="_blank">
+                            <i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i>
+                            <span>Chat on WhatsApp (+92 300 1234567)</span>
+                        </a>
+                    </div>
+
+                    <div class="social-box">
+                        <span class="social-title">Follow Us:</span>
+                        <div class="social-icons-row">
+                            <a href="https://instagram.com" class="social-circle" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://facebook.com" class="social-circle" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://tiktok.com" class="social-circle" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                            <a href="https://pinterest.com" class="social-circle" target="_blank" title="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Copyright Bar -->
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 <strong>Ideo Style</strong> - Traditional Ladies Clothing. All Categories Showcase Page.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
